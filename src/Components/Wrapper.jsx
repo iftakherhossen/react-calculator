@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import KeyPad from './KeyPad';
 import Screen from './Screen';
+import Footer from './Footer';
 
 const Wrapper = () => {
      let [calc, setCalc] = useState({
@@ -10,9 +11,12 @@ const Wrapper = () => {
      });
 
      return (
-          <div className="md:w-[450px] md:h-auto bg-sky-700 rounded-2xl p-5 shadow-xl">
-               <Screen value={calc.num ? calc.num : calc.res} />
-               <KeyPad calc={calc} setCalc={setCalc} />
+          <div className="flex flex-column justify-center items-center">
+               <div className="md:w-[450px] md:h-auto bg-sky-700 rounded-2xl p-5 shadow-xl">
+                    <Screen value={calc.num ? calc.num : calc.res} />
+                    <KeyPad calc={calc} setCalc={setCalc} />
+               </div>
+               <Footer />
           </div>
      );
 };
