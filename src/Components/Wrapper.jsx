@@ -10,7 +10,7 @@ const Wrapper = () => {
      });
 
      return (
-          <div className="md:w-[400px] md:h-auto bg-sky-700 rounded-2xl p-5 shadow-xl">
+          <div className="md:w-[400px] md:h-full bg-sky-700 rounded-2xl p-5 shadow-xl">
                <Screen value={calc.num ? calc.num : calc.res} />
                <KeyPad calc={calc} setCalc={setCalc} />
           </div>
